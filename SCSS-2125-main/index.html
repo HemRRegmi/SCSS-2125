@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scss</title>
+    <style>
+        /* General Styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: linear-gradient(90deg, #033e65,#5a2d52,#672e22);
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .bounce {
+            background-color: darkred;
+            border-radius: 50%;
+            animation: bounce 0.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+        .rotate {
+            background-color: #fdfdfd9c;
+            animation: rotate 0.1s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .pulse {
+            background-color: #0004fc;
+            border-radius: 50%;
+            animation: pulse 0.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0.5;
+            }
+        }
+
+        /* 4. Sliding Text */
+        .slide {
+            background-color: #ff00d9;
+            padding: 10px;
+            width: auto;
+            animation: slide 0.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-50px);
+            }
+            100% {
+                transform: translateX(50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>SCSS</h1>
+    <div class="container">
+        <div class="box bounce">Bounce</div>
+        <div class="box rotate">Rotate</div>
+        <div class="box pulse">Pulse</div>
+        <div class="box slide">Slide</div>
+    </div>
+</body>
+</html>
